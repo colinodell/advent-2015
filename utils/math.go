@@ -1,6 +1,9 @@
 package utils
 
-import "math"
+import (
+	"math"
+	"strconv"
+)
 
 func Min(numbers ...int) int {
 	min := math.MaxInt64
@@ -24,4 +27,12 @@ func Max(numbers ...int) int {
 	}
 
 	return max
+}
+
+func ToInt(str string) int {
+	result, ok := strconv.Atoi(str)
+
+	check(ok)
+
+	return result
 }
